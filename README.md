@@ -1,6 +1,6 @@
 # Design Pattern
 ## 🏭 C R I A C I O N A I S
-## Factory Method:
+## ➔ Factory Method:
 Define uma interface para criar um objeto, mas permite as classes decidem qual classe intanciar. Permite a uma classe deferir a instanciação para subclasses.
 ### Aplicado em:
 Formas de criar os objetos.
