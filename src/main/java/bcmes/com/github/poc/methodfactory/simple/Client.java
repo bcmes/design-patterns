@@ -1,9 +1,8 @@
-package bcmes.com.github.poc.methodfactory.client;
+package bcmes.com.github.poc.methodfactory.simple;
 
-import bcmes.com.github.poc.methodfactory.simple.Iphone;
-import bcmes.com.github.poc.methodfactory.simple.Iphone11;
-import bcmes.com.github.poc.methodfactory.simple.IphonePro;
-import bcmes.com.github.poc.methodfactory.simple.IphoneX;
+import bcmes.com.github.poc.methodfactory.simple.iphone.Iphone;
+import bcmes.com.github.poc.methodfactory.simple.iphone.Iphone11;
+import bcmes.com.github.poc.methodfactory.simple.iphone.IphoneX;
 
 public class Client {
     private Iphone device = null;
@@ -12,8 +11,6 @@ public class Client {
     private Iphone factory(Class<?> type) {
         if (type == Iphone11.class)
             return new Iphone11();
-        else if (type == IphonePro.class)
-            return new IphonePro();
         else if (type == IphoneX.class)
             return new IphoneX();
         else return null;

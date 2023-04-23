@@ -1,6 +1,4 @@
-package bcmes.com.github.poc.methodfactory;
-
-import bcmes.com.github.poc.methodfactory.client.Client;
+package bcmes.com.github.poc.methodfactory.simple;
 
 public class Application {
     public static void main(String[] args) {

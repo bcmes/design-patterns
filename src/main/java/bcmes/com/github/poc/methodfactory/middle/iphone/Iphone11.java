@@ -1,4 +1,4 @@
-package bcmes.com.github.poc.methodfactory.simple;
+package bcmes.com.github.poc.methodfactory.middle.iphone;
 
 public class Iphone11 extends Iphone {
     @Override
