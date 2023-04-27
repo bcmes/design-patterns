@@ -1,6 +1,8 @@
-package bcmes.com.github.poc.methodfactory.middle.factory;
+package bcmes.com.github.methodfactory.middle.factory;
 
-import bcmes.com.github.poc.methodfactory.middle.iphone.*;
+import bcmes.com.github.methodfactory.middle.iphone.Iphone;
+import bcmes.com.github.methodfactory.middle.iphone.Iphone11;
+import bcmes.com.github.methodfactory.middle.iphone.Iphone11Pro;
 
 public class Iphone11Factory extends IphoneFactory {
 

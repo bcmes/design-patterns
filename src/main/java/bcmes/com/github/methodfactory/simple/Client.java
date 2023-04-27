@@ -1,8 +1,8 @@
-package bcmes.com.github.poc.methodfactory.simple;
+package bcmes.com.github.methodfactory.simple;
 
-import bcmes.com.github.poc.methodfactory.simple.iphone.Iphone;
-import bcmes.com.github.poc.methodfactory.simple.iphone.Iphone11;
-import bcmes.com.github.poc.methodfactory.simple.iphone.IphoneX;
+import bcmes.com.github.methodfactory.simple.iphone.Iphone;
+import bcmes.com.github.methodfactory.simple.iphone.Iphone11;
+import bcmes.com.github.methodfactory.simple.iphone.IphoneX;
 
 public class Client {
     private Iphone device = null;

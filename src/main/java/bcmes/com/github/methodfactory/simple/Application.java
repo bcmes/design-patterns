@@ -1,4 +1,4 @@
-package bcmes.com.github.poc.methodfactory.middle;
+package bcmes.com.github.methodfactory.simple;
 
 public class Application {
     public static void main(String[] args) {
