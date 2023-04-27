@@ -1,17 +1,18 @@
 # Design Pattern
 ## 🏭 C R I A C I O N A I S
 ## ➔ Factory Method:
-Define uma interface para criar um objeto, mas permite as classes decidem qual classe intanciar. Permite a uma classe deferir a instanciação para subclasses.
+Define uma (interface ou classe abstrata) para o "produto", cria as diversas implementações concretas deste "produto", e define um ou mais métodos factories, para retornar o objeto concreto desejado.
 ### Aplicado em:
 Formas de criar os objetos.
 ### Problemas onde aplicar:
 - __Problema 0__: Quando você tem uma classe com diversos métodos, e todos eles criam objetos semelhantes com configurações diferentes, você acaba encontrando muito código comum entre os métodos.
-- __Problema 1__: Imagine que você tem uma Classe que faz integração com um serviço externo, e essa classe possui vários métodos, cada método representa uma nova comunicação com esse serviço externo, para cada nova comunicação um novo método é sempre criado.
+- __Problema 1__: Geralmente uma classe com um grande bloco de IFs que só tende a crescer.
+- __Problema 2__: Imagine que você tem uma Classe que faz integração com um serviço externo, e essa classe possui vários métodos, cada método representa uma nova comunicação com esse serviço externo, para cada nova comunicação um novo método é sempre criado.
 ### Receita geral de como aplicar:
 - Cria-se uma interface ou classe abstrata com o comportamento comum.
 - Faz as diversas implementações da interface.
 - Um método factory é criado que determina qual classe concreta será instanciada.
-- Este método factory pode ser implementado dentro da classe Cliente ou em uma classe específica para isso.
+- Este método factory pode ser implementado dentro da classe Cliente ou em uma classe específica para isso. Esse método factory pode ainda ser granulado, dependendo da complexidade.
 ### Cenários de implementação do Factory, por complexidade:
 - ~~Simples, onde a factory fica na própria classe cliente, como acima.~~
   - Quando a factory a ser criada é pequena e simples, e será usada somente naquela classe cliente.
