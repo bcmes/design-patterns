@@ -8,7 +8,7 @@ Define uma (interface ou classe abstrata) para o "produto", cria as diversas imp
 Formas de criar os objetos.
 ### Problemas onde aplicar:
 - __Problema 0__: Quando você tem uma classe com diversos métodos, e todos eles criam objetos semelhantes com configurações diferentes, você acaba encontrando muito código comum entre os métodos.
-- __Problema 1__: Geralmente uma classe com um grande bloco de IFs que só tende a crescer, as vezes encapsulado em um método. Isso caracteriza um simple factory, que nada tem haver com Factory Method ou qualquer padrão de projeto.
+- __Problema 1__: Geralmente uma classe com um grande bloco de IFs que só tende a crescer, as vezes encapsulado em um método. Isso caracteriza um "problema chamado" simple factory, que nada tem haver com Factory Method ou qualquer padrão de projeto.
 - __Problema 2__: Imagine que você tem uma Classe que faz integração com um serviço externo, e essa classe possui vários métodos, cada método representa uma nova comunicação com esse serviço externo, para cada nova comunicação um novo método é sempre criado.
 ### Receita geral de como aplicar:
 - Cria-se uma interface ou classe abstrata com o comportamento comum.
