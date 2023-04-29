@@ -11,7 +11,7 @@ public class Iphone {
      * O problema é esses blocos IFs, que se muitos e/ou grandes demais, dificultará a leitura e manutenção do arquivo.
      * Imagine que para instanciar cada "tipo" de iPhone, haja antes, várias linhas de configurações.
      */
-    public static Iphone createIphone(Types type){
+    public Iphone createIphone(Types type){
         if (Types.ELEVEN.equals(type)){
             //Multiple lines of instruction
             return new Iphone("iPhone11");
