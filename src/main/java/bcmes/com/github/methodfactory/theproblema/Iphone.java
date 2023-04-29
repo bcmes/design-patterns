@@ -2,14 +2,16 @@ package bcmes.com.github.methodfactory.theproblema;
 
 public class Iphone {
 
-    public String createIphone11(){
+    public Iphone(String type) {/*....*/}
+
+    public static Iphone createIphone11(){
         //Multiple lines of instruction
-        return "iPhone11";
+        return new Iphone("iPhone11");
     }
 
-    public String createIphoneX(){
+    public static Iphone createIphoneX(){
         //Multiple lines of instruction
-        return "iPhoneX";
+        return new Iphone("iPhoneX");
     }
 
     //....Every new iPhone is a new method

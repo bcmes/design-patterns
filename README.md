@@ -1,7 +1,9 @@
 # Design Pattern
 ## 🏭 C R I A C I O N A I S
 ## ➔ Factory Method:
-Define uma (interface ou classe abstrata) para o "produto", cria as diversas implementações concretas deste "produto", e define um ou mais métodos factories, para retornar o objeto concreto desejado.
+Outros nomes conhecidos: `Construtor virtual`
+
+Define uma (interface ou classe abstrata) para o "produto", cria as diversas implementações concretas deste "produto", e define um ou mais métodos factories, para retornar o objeto concreto desejado, conforme alguma condição.
 ### Aplicado em:
 Formas de criar os objetos.
 ### Problemas onde aplicar:
@@ -10,9 +12,9 @@ Formas de criar os objetos.
 - __Problema 2__: Imagine que você tem uma Classe que faz integração com um serviço externo, e essa classe possui vários métodos, cada método representa uma nova comunicação com esse serviço externo, para cada nova comunicação um novo método é sempre criado.
 ### Receita geral de como aplicar:
 - Cria-se uma interface ou classe abstrata com o comportamento comum.
-- Faz as diversas implementações da interface.
+- Faz as diversas implementações da interface ou classe abstrata.
 - Um método factory é criado que determina qual classe concreta será instanciada.
-- Este método factory pode ser implementado dentro da classe Cliente ou em uma classe específica para isso. Esse método factory pode ainda ser granulado, dependendo da complexidade.
+- Este método factory pode ser implementado dentro da classe Cliente ou em uma classe específica para isso. Esse método factory pode ainda ser granulado, ou segmentado em grupos, dependendo da complexidade.
 ### Cenários de implementação do Factory, por complexidade:
 - ~~Simples, onde a factory fica na própria classe cliente, como acima.~~
   - Quando a factory a ser criada é pequena e simples, e será usada somente naquela classe cliente.
@@ -26,9 +28,6 @@ Client: +factory(Class<?> type)
 Iphone <|-- Iphone11
 Iphone <|-- IphoneX
 Iphone <|-- IphonePro
-Iphone: +assemble()
-Iphone: +certificates()
-Iphone: +pack()
 Iphone: +getHardware()
 class Iphone11{
 +getHardware()
@@ -58,9 +57,6 @@ Iphone <|-- IphoneXSMax
 Iphone <|-- Iphone11
 Iphone <|-- Iphone11Pro
 IphoneFactory: createIphone(Class<?> type)
-Iphone: +assemble()
-Iphone: +certificates()
-Iphone: +pack()
 Iphone: +getHardware()
 IphoneX: +getHardware()
 IphoneXSMax: +getHardware()
@@ -88,9 +84,6 @@ Iphone <|-- Iphone11Pro
 IphoneFactory: #createIphone(Type type)
 IphoneXFactory: createIphone(Type type)
 Iphone11Factory: createIphone(Type type)
-Iphone: +assemble()
-Iphone: +certificates()
-Iphone: +pack()
 Iphone: +getHardware()
 IphoneX: +getHardware()
 IphoneXSMax: +getHardware()
@@ -113,5 +106,7 @@ DB <|-- OracleDB
 DB <|-- PostgresDB
 ```
 
-Sobre recursos usados aqui:
+Fontes:
+
+Readme.md:
 https://raullesteves.medium.com/github-como-fazer-um-readme-md-bonit%C3%A3o-c85c8f154f8
