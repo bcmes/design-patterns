@@ -24,19 +24,22 @@ Client ..> Iphone
 Client ..> Iphone11
 Client ..> IphoneX
 Client ..> IphonePro
-Client: +factory(Class<?> type)
+Client: +factory(Class<?> type) Iphone
 Iphone <|-- Iphone11
 Iphone <|-- IphoneX
 Iphone <|-- IphonePro
-Iphone: +getHardware()
+class Iphone{
+<<interface>>
++create() Iphone
+}
 class Iphone11{
-+getHardware()
++create() Iphone
 }
 class IphoneX{
-+getHardware()
++create() Iphone
 }
 class IphonePro{
-+getHardware()
++create() Iphone
 }
 ```
 [..> Dependencia, —|> Herança](https://mermaid.js.org/syntax/classDiagram.html) `[About Mermaid]`
@@ -105,6 +108,8 @@ PostgresDBFactory ..> PostgresDB
 DB <|-- OracleDB
 DB <|-- PostgresDB
 ```
+
+Obs.: O Factory Method é um padrão de projeto que se baseia em herança. Se você torná-lo estático, você não pode mais estendê-lo em subclasses, que é contrário ao propósito do padrão.
 
 Fontes:
 

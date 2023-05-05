@@ -5,24 +5,18 @@ import bcmes.com.github.methodfactory.simple.iphone.Iphone11;
 import bcmes.com.github.methodfactory.simple.iphone.IphoneX;
 
 public class Client {
-    private Iphone device = null;
-
-    //Não tem nada haver com a responsabilidade dessa classe, mas ten Dev que deixa no client mesmo :(
+    //Não tem nada haver com a responsabilidade dessa classe, mas você pode encontrar no client.
     private Iphone factory(Class<?> type) {
         if (type == Iphone11.class)
             return new Iphone11();
         else if (type == IphoneX.class)
             return new IphoneX();
-        else return null;
+        else throw new IllegalArgumentException("Invalid type.");
     }
 
-    //....
-    public String anyOperation() {
-        //....
-        device = factory(Iphone11.class);
-        //....
-        assert device != null : "Iphone model not found.";
-        return "Finished operation with " + device.getClass().getSimpleName() + ".";
+    public static void main(String[] args) {
+        Client client = new Client();
+        Iphone iphone = client.factory(Iphone11.class);
+        System.out.println("\nFinished operation with " + iphone.getClass().getSimpleName() + ".");
     }
-    //....
 }
