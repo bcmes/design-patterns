@@ -7,7 +7,7 @@ import bcmes.com.github.methodfactory.middle.iphone.IphoneXSMax;
 public class IphoneXFactory extends IphoneFactory {
 
     @Override
-    public Iphone createIPhone(Type type) {
+    public Iphone factory(Type type) {
         if (type == Type.X)
             return new IphoneX();
         else if (type == Type.XSMAX)

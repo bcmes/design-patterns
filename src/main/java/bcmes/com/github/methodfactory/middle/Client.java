@@ -10,7 +10,7 @@ public class Client {
     public String anyOperation() {
         //....
         IphoneFactory factory = new Iphone11Factory();
-        device = factory.createIPhone(IphoneFactory.Type.ELEVEN);
+        device = factory.factory(IphoneFactory.Type.ELEVEN);
         //....
         assert device != null : "Iphone model not found.";
         return "Finished operation with " + device.getClass().getSimpleName() + ".";

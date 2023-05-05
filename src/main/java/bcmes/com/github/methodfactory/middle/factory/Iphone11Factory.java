@@ -7,7 +7,7 @@ import bcmes.com.github.methodfactory.middle.iphone.Iphone11Pro;
 public class Iphone11Factory extends IphoneFactory {
 
     @Override
-    public Iphone createIPhone(Type type) {
+    public Iphone factory(Type type) {
         if (type == Type.ELEVEN)
             return new Iphone11();
         else if (type == Type.ELEVEN_PRO)
