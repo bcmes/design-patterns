@@ -59,12 +59,15 @@ Iphone <|-- IphoneX
 Iphone <|-- IphoneXSMax
 Iphone <|-- Iphone11
 Iphone <|-- Iphone11Pro
-IphoneFactory: createIphone(Class<?> type)
-Iphone: +getHardware()
-IphoneX: +getHardware()
-IphoneXSMax: +getHardware()
-Iphone11: +getHardware()
-Iphone11Pro: +getHardware()
+IphoneFactory: factory(Class<?> type) Iphone
+class Iphone{
+<<interface>>
++create() Iphone
+}
+IphoneX: +create() Iphone
+IphoneXSMax: +create() Iphone
+Iphone11: +create() Iphone
+Iphone11Pro: +create() Iphone
 ```
 - Médio, se a factory crescer demais, podemos segmenta-la em grupos.
   - Quando se faz sentido criar uma classe factory para cada grupo das classes concretas relacionadas.
@@ -84,14 +87,20 @@ Iphone <|-- IphoneX
 Iphone <|-- IphoneXSMax
 Iphone <|-- Iphone11
 Iphone <|-- Iphone11Pro
-IphoneFactory: #createIphone(Type type)
-IphoneXFactory: createIphone(Type type)
-Iphone11Factory: createIphone(Type type)
-Iphone: +getHardware()
-IphoneX: +getHardware()
-IphoneXSMax: +getHardware()
-Iphone11: +getHardware()
-Iphone11Pro: +getHardware()
+class IphoneFactory{
+<<abstract>>
+#factory(Type type) Iphone
+}
+IphoneXFactory: factory(Type type) Iphone
+Iphone11Factory: factory(Type type) Iphone
+class Iphone{
+<<interface>>
++create() Iphone
+}
+IphoneX:  +create() Iphone
+IphoneXSMax:  +create() Iphone
+Iphone11:  +create() Iphone
+Iphone11Pro:  +create() Iphone
 ```
 - Complexo, onde há uma classe factory para cada implementação concreta criada.
   - Quando a construção da factory para cada classe concreta é grande e complexa, com parametros únicos entre as factories.
@@ -107,6 +116,12 @@ OracleDBFactory ..> OracleDB
 PostgresDBFactory ..> PostgresDB
 DB <|-- OracleDB
 DB <|-- PostgresDB
+class DB{
+<<interface>>
+}
+class DBFactory{
+<<abstract>>
+}
 ```
 
 Obs.: O Factory Method é um padrão de projeto que se baseia em herança. Se você torná-lo estático, você não pode mais estendê-lo em subclasses, que é contrário ao propósito do padrão.
