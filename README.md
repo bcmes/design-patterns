@@ -151,6 +151,21 @@ Permite que você produza famílias de objetos relacionados sem ter que especifi
 ### Cenário de implementação do Abstract Factory:
 ![img_1.png](img_1.png)
 
+## ➔ Builder:
+Construir objetos complexos passo a passo.
+### Aplicado em:
+...
+### Problemas onde aplicar:
+- __Problema 0__: Pode tentar resolver criando uma classe base, e várias subclasses dela. Isso gera muitas sub-classes.
+- __Problema 1__: Tentativa de resolver com uma única classe, que possua um construtor com todos os parametros possíveis. Isso gerará instaciações confusas e com muitos nulls.
+- __Problema 2__: Tentativa de resolver com uma única classe, com vários construtores, um para cada caso. Isso gerará uma quantidade grande de construtores.
+
+### Receita geral de como aplicar:
+- Extraia o código de construção do objeto para fora de sua própria classe.
+- Mova para objetos separados chamados builders.
+- O objeto não deve ser acessado enquanto está sendo construído.
+- Para seguencias ordenadas da construção, podemos colocar em outra classe Diretor.
+### Cenário de implementação do Abstract Factory:
 
 Fontes:
 
