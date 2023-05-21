@@ -166,9 +166,9 @@ Construir objetos complexos passo a passo.
 - O objeto não deve ser acessado enquanto está sendo construído.
 - Para seguencias ordenadas da construção, podemos colocar em outra classe Diretor.
 ### Cenário de implementação do Builder:
-- Simples, o builder é criado dentro da classe produto.
+- Simples, o builder é criado dentro da própria classe produto.
 
-- Médio, onde tempos produtos relacionados apenas logicamente.
+- Médio, onde tempos produtos que podem ser relacionados logicamente e podemos criar um builder comum a eles.
 ![img.png](img.png)
 
 Fontes:
