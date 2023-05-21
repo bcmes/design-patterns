@@ -8,21 +8,19 @@ public class Car {
 
     public static class Builder {
         private final Car car;
-        private final Builder builder;
 
         public Builder() {
             this.car = new Car();
-            this.builder = this;
         }
 
         public Builder color(String color) {
             this.car.color = color;
-            return this.builder;
+            return this;
         }
 
         public Builder numberDoors(int numberDoors) {
             this.car.numberDoors = numberDoors;
-            return this.builder;
+            return this;
         }
 
         public Car build() {
@@ -31,7 +29,7 @@ public class Car {
 
         //Com diretor embutido
         public Builder ferrari() {
-            return Director.ferrari(builder);
+            return Director.ferrari(this);
         }
     }
 
