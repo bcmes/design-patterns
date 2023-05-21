@@ -165,7 +165,11 @@ Construir objetos complexos passo a passo.
 - Mova para objetos separados chamados builders.
 - O objeto não deve ser acessado enquanto está sendo construído.
 - Para seguencias ordenadas da construção, podemos colocar em outra classe Diretor.
-### Cenário de implementação do Abstract Factory:
+### Cenário de implementação do Builder:
+- Simples, o builder é criado dentro da classe produto.
+
+- Médio, onde tempos produtos relacionados apenas logicamente.
+![img.png](img.png)
 
 Fontes:
 
