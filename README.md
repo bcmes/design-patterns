@@ -171,6 +171,19 @@ Construir objetos complexos passo a passo.
 - Médio, onde tempos produtos que podem ser relacionados logicamente e podemos criar uma interface builder comum a eles.
 ![img.png](img.png)
 
+## ➔ Prototype:
+Outros nomes conhecidos: `Clone`
+
+Copiar objetos existentes sem fazer seu código ficar dependente de suas classes.
+### Aplicado em:
+...
+### Problemas onde aplicar:
+- __Problema 0__: ..
+### Receita geral de como aplicar:
+- Crie uma interface com um método clone.
+- Toda classe que deva ser clonavel, deve implementar essa interface.
+### Cenário de implementação do Builder:
+
 Fontes:
 
 Readme.md:
