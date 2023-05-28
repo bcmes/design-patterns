@@ -183,6 +183,36 @@ Copiar objetos existentes sem fazer seu código ficar dependente de suas classes
 - Crie uma interface com um método clone.
 - Toda classe que deva ser clonavel, deve implementar essa interface.
 ### Cenário de implementação do Builder:
+============
+## ➔ Builder:
+Construir objetos complexos passo a passo.
+### Aplicado em:
+...
+### Problemas onde aplicar:
+- __Problema 0__: Pode tentar resolver criando uma classe base, e várias subclasses dela. Isso gera muitas sub-classes.
+- __Problema 1__: Tentativa de resolver com uma única classe, que possua um construtor com todos os parametros possíveis. Isso gerará instaciações confusas e com muitos nulls.
+- __Problema 2__: Tentativa de resolver com uma única classe, com vários construtores, um para cada caso. Isso gerará uma quantidade grande de construtores.
+
+### Receita geral de como aplicar:
+- Extraia o código de construção do objeto para fora de sua própria classe.
+- Mova para objetos separados chamados builders.
+- O objeto não deve ser acessado enquanto está sendo construído.
+- Para seguencias ordenadas da construção, podemos colocar em outra classe Diretor.
+### Cenário de implementação do Builder:
+- Simples, o builder é criado dentro da própria classe produto.
+
+- Médio, onde tempos produtos que podem ser relacionados logicamente e podemos criar uma interface builder comum a eles.
+  ![img.png](img.png)
+
+## ➔ Singleton:
+Garante a geração de uma única instância de uma classe em uma aplicação. Se seu ambiente for multi-thread, você precisará controlar este caso.
+### Aplicado em:
+### Problemas onde aplicar:
+- __Problema 0__: Controlar o acesso a algum recurso compartilhado, através de uma única instância. Existem variações desse problema, onde deve haver um número limitado de instâncias.
+### Receita geral de como aplicar:
+- Torne os construtores privados e crie um método estático que retorne a instancia única.
+  - Não implemente a lógica que deveria ficar no método "getInstance()" no construtor da classe, pois quando alguém usa o new, ele tem a certeza de estar gerando uma nova instância, o que acabará não ocorrendo.
+### Cenário de implementação do Builder:
 
 Fontes:
 
