@@ -214,6 +214,20 @@ Garante a geração de uma única instância de uma classe em uma aplicação. S
   - Não implemente a lógica que deveria ficar no método "getInstance()" no construtor da classe, pois quando alguém usa o new, ele tem a certeza de estar gerando uma nova instância, o que acabará não ocorrendo.
 ### Cenário de implementação do Builder:
 
+## ✅ E S T R U T U R A I S
+## ➔ Adapter:
+Outros nomes conhecidos: `Wrapper`
+
+Permite que interface incompatíveis colaborem.
+
+### Aplicado em:
+Converter a interface de um objeto para que outro objeto possa entendê-lo.
+### Problemas onde aplicar:
+- __Problema 0__: ...
+### Receita geral de como aplicar:
+- Encubra um dos objetos para esconder a complexidade da conversão acontecendo nos bastidores.
+
+
 Fontes:
 
 Readme.md:
