@@ -223,10 +223,13 @@ Permite que interface incompatíveis colaborem.
 ### Aplicado em:
 Converter a interface de um objeto para que outro objeto possa entendê-lo.
 ### Problemas onde aplicar:
-- __Problema 0__: ...
+- __Problema 0__: Apis com protocolos de comunicações diferentes, XML to JSON.
+- __Problema 1__: Quando você quiser encaixar um pino quadrado em um buraco redondo, rs.
 ### Receita geral de como aplicar:
-- Encubra um dos objetos para esconder a complexidade da conversão acontecendo nos bastidores.
-
+- Criar ou obter a interface de comunição com o cliente que deseja-se comunicar.
+- Criar a classe Adapter para implements ou extends o contrato acima.
+- Adicionar o objeto "incompatível" como propriedade da classe adapter, normalmente você recebe a instancia dele via construtor.
+- Cumprir a implementação do contrato, se utilizando do objeto incompativel para realizar o de-para da comunicação.
 
 Fontes:
 
