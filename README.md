@@ -231,6 +231,18 @@ Converter a interface de um objeto para que outro objeto possa entendê-lo.
 - Adicionar o objeto "incompatível" como propriedade da classe adapter, normalmente você recebe a instancia dele via construtor.
 - Cumprir a implementação do contrato, se utilizando do objeto incompativel para realizar o de-para da comunicação.
 
+## ➔ Bridge:
+Permite que você divida, uma classe grande ou uma hieraquia de classes horizontais (tentando estender as classes em duas dimensões diferentes), em hieraquias separadas idependentes. Apenas extraindo abstrações e realizando suas diversas implementações. Mantenha a classe principal e troque as demais de herança por composição, essas tais referencias irão agir como uma ponte.
+
+### Aplicado em:
+...
+### Problemas onde aplicar:
+- __Problema 0__: Eliminar heranças horizontais.
+- __Problema 1__: Quebrar uma classe grande em pedaços menores.
+### Receita geral de como aplicar:
+- ...
+![img_2.png](img_2.png)
+
 Fontes:
 
 Readme.md:
